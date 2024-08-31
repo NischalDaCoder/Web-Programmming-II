@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AniWave - Your Gateway to Anime </title>
+        <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+    </head>
+    <body>
+        <header>
+            <h1>AniWave</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Browse</a></li>
+                    <li><a href="#">My List</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="search">
+                <input type="text" placeholder="Search anime...">
+                <button type="submit">Search</button>
+            </section>
+            <section id="featured">
+                <h2>Featured Anime</h2>
+                <div class="anime-grid">
+                    <div th:each="anime : ${featuredAnime}" class="anime-card">
+                        <img th:src="@{'/images/' + ${anime.toLowerCase().replace(' ', '-')} + '.jpg'}" th:alt="${anime}">
+                        <h3 th:text="${anime}"></h3>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 AniWave. All rights reserved.</p>
+        </footer>
+        <script th:src="@{/js/main.js}"></script>
+    </body>
+    </html>
+
+    </body>
+</html>
