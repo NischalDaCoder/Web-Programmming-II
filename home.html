@@ -2,9 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8">
-        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AniWave - Your Gateway to Anime </title>
+        <title>AniWave - Your Gateway to Anime</title>
         <link rel="stylesheet" th:href="@{/css/styles.css}"/>
     </head>
     <body>
@@ -12,11 +11,9 @@
             <h1>AniWave</h1>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Browse</a></li>
-                    <li><a href="#">My List</a></li>
-                    <li><a href="#">Community</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a th:href="@{/}">Home</a></li>
+                    <li><a th:href="@{/login}">Login</a></li>
+                    <li><a th:href="@{/register}">Register</a></li>
                 </ul>
             </nav>
         </header>
@@ -38,9 +35,6 @@
         <footer>
             <p>&copy; 2024 AniWave. All rights reserved.</p>
         </footer>
-        <script th:src="@{/js/main.js}"></script>
-    </body>
-    </html>
-
+        <script th:src="@{/js/main.js}" defer></script>
     </body>
 </html>
