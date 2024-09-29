@@ -1,0 +1,64 @@
+header h1 {
+	font-size: 90px;
+	  font-weight: 600;
+	  font-family:georgia, serif;
+	  color: #c4e7cf;
+	  text-shadow: 3px 3px 4px  #957dad;
+	  text-align:center;
+	  }
+	  header {
+		background-color: #ffffff;
+					  	background-image: linear-gradient(315deg, #18191A 20%, #434343 60%);
+						padding: 2rem;
+	  	
+	      padding: 0rem;
+	  }
+	  main{
+		background-color: #ffffff;
+			     	
+			  	background-image:linear-gradient(180deg, #E4E6Eb 10%, #B0B3B8 55%);
+			  	
+	  	
+		}
+		#comments > h2{
+			font-size: 40px;
+				  font-weight: 300;
+				  font-family:georgia, serif;
+				  color: #15202B;
+				  text-shadow: 2px 2px 0px  rgb(0, 128, 128);
+				               
+							   margin-top:-20px;
+							  }
+							  body {
+							  	font-family:georgia, serif;
+							      line-height: 1.6;
+							      margin: 0;
+							      padding: 0;
+							      background-color: #1a1a1a;
+							      color: rgb(0, 0, 0); 
+								  
+								  }
+								  nav ul {
+								      list-style-type: none;
+								      padding: 1.5rem;
+								  	
+								  }
+
+								  nav ul li {
+								      display: inline;
+								      margin-right: 1rem;
+								  	
+								  	
+								  }
+
+								  nav ul li a {
+								      color: rgb(255, 255, 255);
+								      text-decoration: none;
+								  	font-family:georgia, serif;
+								  	
+								  }
+
+								  main {
+								      padding: 2rem;}
+		
+		
