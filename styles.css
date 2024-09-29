@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
+	font-family:georgia, serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -8,29 +8,53 @@ body {
 }
 
 header {
-    background-color: rgb(14, 143, 132);
-    padding: 1rem;
+	background-color: #ffffff;
+   	
+	background-image:linear-gradient(180deg, #E4E6Eb 10%, #B0B3B8 55%);
+	
+    padding: 0rem;
 }
 
 header h1 {
-    color:rgba(0, 0, 0, 0.968);
-    margin: 0;
-    font-size: 2rem;
+	font-size: 90px;
+	  font-weight: 600;
+	  font-family:georgia, serif;
+	  color: #c4e7cf;
+	  text-shadow: 3px 3px 4px  #957dad;
+	  text-align:center;
+    
+    
 }
+#featured > h2{
+	font-size: 40px;
+		  font-weight: 300;
+		  font-family:georgia, serif;
+		  color: #e4edf2;
+		  text-shadow: 2px 2px 0px  rgb(255, 128, 0);
+		               
+					   margin-top:-20px;
+		               
+}
+
 
 nav ul {
     list-style-type: none;
-    padding: 0;
+    padding: 1.5rem;
+	
 }
 
 nav ul li {
     display: inline;
     margin-right: 1rem;
+	
+	
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: rgb(0, 0, 0);
     text-decoration: none;
+	font-family:georgia, serif;
+	
 }
 
 main {
@@ -39,22 +63,7 @@ main {
 
 #search {
     margin-bottom: 2rem;
-}
 
-#search input {
-    padding: 0.5rem;
-    width: 70%;
-    background-color: #333;
-    border: none;
-    color: #ffffff;
-}
-
-#search button {
-    padding: 0.5rem 1rem;
-    background-color: rgb(14, 143, 132);
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
 }
 
 .anime-grid {
@@ -64,10 +73,12 @@ main {
 }
 
 .anime-card {
-    background-color: #333;
+    background-color: floralwhite;
     border-radius: 5px;
     overflow: hidden;
     transition: transform 0.3s ease;
+	display:flex;
+	flex-direction:column;
 }
 
 .anime-card:hover {
@@ -76,7 +87,7 @@ main {
 
 .anime-card img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .anime-card h3 {
@@ -120,4 +131,39 @@ button {
 
 button:hover {
     background-color: #218838;
+}
+.anime-actions{
+	display:flex;
+	justify-content:space-between;
+	margin-top:10px;
+}
+
+.play-button, .comment-button{
+	padding: 5px 10px;
+	border:none;
+	border-radius:5px;
+	cursor:pointer;
+	transition:background-colot 0.3s;
+}
+.play-button{
+	background-color:#4CAF50;
+	color:white;
+}
+.comment-button{
+	background-color:#008CBA;
+	color:black;
+	text-decoration:none;
+}
+.play-button:hover, .comment-button:hover{
+	opacity:0.8;
+}
+main{
+	background-color: #ffffff;
+	background-image: linear-gradient(315deg, #18191A 20%, #434343 60%);
+	
+
+}
+#comments, #add-comment{
+	color:black;
+	font-family:georgia, serif;
 }
