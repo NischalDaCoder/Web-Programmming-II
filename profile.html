@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+<body>
+    <h1>User Profile</h1>
+    <p>Email: <span th:text="${user.email}"></span></p>
+	<p>Name: <span th:text="${user.firstName  + user.lastName}"></span></p>
+
+    <h2>Recent Activity</h2>
+    <p th:if="${lastAccessTime}">Last accessed users list: <span th:text="${lastAccessTime}"></span></p>
+    <p th:if="${lastCommentedAnime}">Last commented on anime: <span th:text="${lastCommentedAnime}"></span></p>
+</body>
+</html>

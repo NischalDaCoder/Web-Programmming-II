@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${animeName + ' Comments - Aniwave'}"></title>
+	<link rel="stylesheet" th:href="@{/comments.css}" />
+	
+</head>
+<body>
+    <header>
+        <h1 th:text="${animeName + ' Comments'}"></h1>
+        <nav>
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/login}">Login</a></li>
+                <li><a th:href="@{/register}">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="comments">
+            <h2>Comments</h2>
+            <div th:if="${#lists.isEmpty(comments)}">
+                <p>No comments yet. Share your thoughts now!</p>
+            </div>
+            <div th:each="comment : ${comments}" class="comment">
+                <p th:text="${comment.content}"></p>
+                <p>Posted by <span th:text="${comment.user.firstName + ' ' + comment.user.lastName}"></span>
+                   on <span th:text="${#temporals.format(comment.createdAt, 'dd-MM-yyyy HH:mm')}"></span></p>
+            </div>
+        </section>
+        <section id="add-comment">
+            <h2>Write a Comment</h2>
+            <form th:action="@{/add-comment}" method="post">
+                <input type="hidden" name="animeName" th:value="${animeName}"/>
+                <textarea name="content" rows="4" cols="50" required></textarea>
+                <button type="submit">Post Comment</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
